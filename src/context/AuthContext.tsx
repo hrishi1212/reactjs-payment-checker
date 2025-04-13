@@ -42,7 +42,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
     setToken(null);
   };
 
-  // Optional: Auto logout when token expires
+  //Auto logout when token expires
   useEffect(() => {
     if (!token) return;
 

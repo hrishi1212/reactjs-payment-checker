@@ -4,18 +4,15 @@ import ProfilePage from "../ProfilePage";
 import { BrowserRouter } from "react-router-dom";
 import { fetchUser } from "../../services/api";
 
-// Mock dependencies
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
   useNavigate: jest.fn(),
 }));
 
-// Mock the fetchUser function
 jest.mock("../../services/api", () => ({
   fetchUser: jest.fn(),
 }));
 
-// Mock the useAuth hook
 jest.mock("../../context/AuthContext", () => ({
   useAuth: jest.fn(),
 }));
@@ -24,7 +21,6 @@ describe("ProfilePage", () => {
   const mockNavigate = jest.fn();
 
   beforeEach(() => {
-    // Reset all mocks before each test
     jest.clearAllMocks();
   });
 
@@ -51,7 +47,6 @@ describe("ProfilePage", () => {
       </BrowserRouter>
     );
 
-    // Check that the loading message is displayed initially
     expect(screen.getByText("Loading user info...")).toBeInTheDocument();
 
     // Wait for the user data to be rendered and check the content
