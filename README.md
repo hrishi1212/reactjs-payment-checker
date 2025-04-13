@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# Getting Started with React Payment checker
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Getting Started
+
+```bash
+   git clone <repository_url>
+
+   cd <project_directory>
+
+   npm install
+
+   npm run start
+```
 
 ## Available Scripts
 
@@ -29,18 +41,35 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Requirements
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The project meets the following business requirements:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Login Page**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Email and password fields [cite: 2]
+- Validation for each field (Email is a valid email, password has a minimum length) [cite: 2]
+- API call with response handling, error handling, and loading state [cite: 2]
+- Redirect to the profile page on successful login [cite: 2]
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**My Profile Page**
 
-## Learn More
+- Displays user information (name, email, business name, Company Expected Activity) [cite: 2]
+- Handles 401 errors for unauthorized/unauthenticated access [cite: 2]
+- Redirects to the login page if not authenticated [cite: 2]
+- API call with response handling, error handling, and loading state (fetching user data) [cite: 2]
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Payment Date Checker Component**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Displayed on the My Profile page [cite: 3]
+- Two date/calendar inputs: one for the invoice due date and one for monthly payment dates or pay cycle dates [cite: 3]
+- Displays a result text when both dates are set (e.g., "Your invoice pay date will be X") [cite: 3]
+- Calculates the next payment date of the invoice based on the invoice due date and the pay cycle [cite: 3, 4, 5]
+
+## Resources
+
+- Postman Docs: [https://documenter.getpostman.com/view/24871387/2sAYkKGcMh](https://documenter.getpostman.com/view/24871387/2sAYkKGcMh) [cite: 2]
+
+## Example
+
+For example, if you select an invoice due date of April 15th and a pay cycle of every month on the 30th, the component will determine that the payment is due on April 30th. [cite: 3, 4, 5]
