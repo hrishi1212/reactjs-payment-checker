@@ -34,7 +34,7 @@ const ProfilePage = () => {
     };
 
     fetchData();
-  }, [token]);
+  }, [token, navigate]);
 
   if (loading) return <p>Loading user info...</p>;
   if (error) return <p style={{ color: "red" }}>{error}</p>;
