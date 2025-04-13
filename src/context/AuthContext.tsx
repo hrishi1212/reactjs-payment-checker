@@ -6,7 +6,7 @@ interface AuthContextType {
   logout: () => void;
 }
 
-const AuthContext = createContext<AuthContextType | null>(null);
+export const AuthContext = createContext<AuthContextType | null>(null);
 
 const getValidToken = (): string | null => {
   const token = localStorage.getItem("token");
