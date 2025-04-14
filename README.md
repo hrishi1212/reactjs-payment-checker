@@ -1,4 +1,4 @@
-# Getting Started with React Payment checker
+# Getting Started with React Payment Checker
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -47,29 +47,29 @@ The project meets the following business requirements:
 
 **Login Page**
 
-- Email and password fields [cite: 2]
-- Validation for each field (Email is a valid email, password has a minimum length) [cite: 2]
-- API call with response handling, error handling, and loading state [cite: 2]
-- Redirect to the profile page on successful login [cite: 2]
+- Email and password fields.
+- Validation for each field (Email is a valid email, password has a minimum length).
+- API call with response handling, error handling, and loading state.
+- Redirect to the profile page on successful login.
 
 **My Profile Page**
 
-- Displays user information (name, email, business name, Company Expected Activity) [cite: 2]
-- Handles 401 errors for unauthorized/unauthenticated access [cite: 2]
-- Redirects to the login page if not authenticated [cite: 2]
-- API call with response handling, error handling, and loading state (fetching user data) [cite: 2]
+- Displays user information (name, email, business name, Company Expected Activity).
+- Handles 401 errors for unauthorized/unauthenticated access.
+- Redirects to the login page if not authenticated.
+- API call with response handling, error handling, and loading state (fetching user data).
 
 **Payment Date Checker Component**
 
-- Displayed on the My Profile page [cite: 3]
-- Two date/calendar inputs: one for the invoice due date and one for monthly payment dates or pay cycle dates [cite: 3]
-- Displays a result text when both dates are set (e.g., "Your invoice pay date will be X") [cite: 3]
-- Calculates the next payment date of the invoice based on the invoice due date and the pay cycle [cite: 3, 4, 5]
+- Displayed on the My Profile page.
+- Two date/calendar inputs: one for the invoice due date and one for monthly payment dates or pay cycle dates.
+- Displays a result text when both dates are set (e.g., "Your invoice pay date will be X").
+- Calculates the next payment date of the invoice based on the invoice due date and the pay cycle.
 
 ## Resources
 
-- Postman Docs: [https://documenter.getpostman.com/view/24871387/2sAYkKGcMh](https://documenter.getpostman.com/view/24871387/2sAYkKGcMh) [cite: 2]
+- Postman Docs: [https://documenter.getpostman.com/view/24871387/2sAYkKGcMh](https://documenter.getpostman.com/view/24871387/2sAYkKGcMh)
 
 ## Example
 
-For example, if you select an invoice due date of April 15th and a pay cycle of every month on the 30th, the component will determine that the payment is due on April 30th. [cite: 3, 4, 5]
+For example, if you select an invoice due date of April 15th and a pay cycle of every month on the 30th, the component will determine that the payment is due on April 30th.
