@@ -1,0 +1,29 @@
+  .profile-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .profile-sidebar {
+    min-width: 150px;
+  }
+
+  .logout-button {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .logout-button:hover {
+    background-color: #e84118;
+  }
+
+  .profile-content {
+    flex: 1;
+  }

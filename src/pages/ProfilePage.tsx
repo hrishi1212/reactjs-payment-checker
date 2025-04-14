@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./ProfilePage.css";
 import { useNavigate } from "react-router-dom";
 import { fetchUser } from "../services/api";
 import { useAuth } from "../context/AuthContext";
@@ -40,19 +41,27 @@ const ProfilePage = () => {
   if (error) return <p style={{ color: "red" }}>{error}</p>;
 
   return (
-    <div>
-      <h1>Welcome {user.full_name}</h1>
-      <p>
-        <strong>Email:</strong> {user.email}
-      </p>
-      <p>
-        <strong>Business Name:</strong> {user.Company?.name}
-      </p>
-      <p>
-        <strong>Company Expected Activity:</strong> {user.roles}
-      </p>
+    <div className="profile-container">
+      <div className="profile-sidebar">
+        <button className="logout-button" onClick={() => navigate("/logout")}>
+          Logout
+        </button>
+      </div>
 
-      <PaymentDateChecker />
+      <div className="profile-content">
+        <h1>Welcome {user.full_name}</h1>
+        <p>
+          <strong>Email:</strong> {user.email}
+        </p>
+        <p>
+          <strong>Business Name:</strong> {user.Company?.name}
+        </p>
+        <p>
+          <strong>Company Expected Activity:</strong> {user.roles}
+        </p>
+
+        <PaymentDateChecker />
+      </div>
     </div>
   );
 };
